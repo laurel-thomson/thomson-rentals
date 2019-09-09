@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Gayathri&display=swap);
+
+@font-face {
+    font-family: 'selimaregular';
+    src: url('assets/fonts/selima_-webfont.woff2') format('woff2'),
+         url('assets/fonts/selima_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root {
+    font-family: 'Gayathri', sans-serif;
+}
+
+.cursive {
+    font-family: 'selimaregular', cursive;
+}
