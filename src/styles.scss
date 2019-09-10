@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import url(https://fonts.googleapis.com/css?family=Gayathri&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Gayathri:100,400,700&display=swap);
+@import 'app/variables.scss';
 
 @font-face {
     font-family: 'selimaregular';
@@ -12,8 +13,7 @@
 
 :root {
     font-family: 'Gayathri', sans-serif;
-}
-
-.cursive {
-    font-family: 'selimaregular', cursive;
+    font-size: 1.1rem;
+    background-color: $color-gray;
+    padding-bottom: 100px; //size of the footer
 }
