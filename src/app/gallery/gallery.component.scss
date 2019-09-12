@@ -1,0 +1,25 @@
+.gallery {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto 40px auto;
+}
+
+.gallery .img-cont {
+    flex: 1 1 calc(33% - 76px);
+    margin: 40px 20px 0 20px;
+    border: 8px solid white;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.gallery img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    overflow:hidden;
+}
