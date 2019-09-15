@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.top-nav a:not(.icon):hover {
+.top-nav .items a:not(.icon):hover {
     background-color: white;
     color: $color-gray;
 }
@@ -90,11 +90,14 @@
 @media screen and (min-width: 640px) {
     .top-nav {
         background-color: $color-gray;
+    }
+
+    .top-nav .items {
         display: flex;
         justify-content: flex-end;
     }
     
-    .top-nav a {
+    .top-nav .items a {
         color: white;
         padding: 15px 20px;
         font-weight: 900;
