@@ -4,13 +4,37 @@
     .top-nav a {
         display: none;
         color: white;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 10px;
     }
 
     .top-nav a.icon {
-        float: right;
         display: block;
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        height: 25px;
+        width: 35px;
+        cursor: pointer;
+    }
+
+    .top-nav a.icon span, .top-nav a.icon span:before, .top-nav a.icon span:after {
+        border-radius: 1px;
+        height: 5px;
+        width: 35px;
+        background: white;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: all 500ms ease-in-out;
+    }
+
+    .top-nav a.icon span:before {
+        top: -10px;
+    }
+
+    .top-nav a.icon span:after {
+        bottom: -10px; 
     }
 
     .top-nav {
@@ -18,19 +42,26 @@
         padding-bottom: 40px;
     }
 
-    .top-nav a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-        color: white;
-        cursor: pointer;
-        font-size: 30px;
-    }
-
     .top-nav.mobileNavOpen a {
         float: none;
         display: block;
         text-align: left;
+    }
+
+    .top-nav.mobileNavOpen a.icon span {
+        background-color: transparent;
+    }
+
+    .top-nav.mobileNavOpen a.icon span:before, .top-nav.mobileNavOpen a.icon span:after {
+        top: 0;
+    }
+
+    .top-nav.mobileNavOpen span:before {
+        transform: rotate(45deg);
+    }
+
+    .top-nav.mobileNavOpen span:after {
+        transform: rotate(-45deg);
     }
 }
 
