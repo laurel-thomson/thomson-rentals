@@ -1,9 +1,10 @@
-<nav class="top-nav">
+<nav class="top-nav" [ngClass]="{'mobileNavOpen' : mobileNavOpen}">
     <a>Home</a>
     <a>Apartments</a>
     <a>Floor Plans</a>
     <a>Amenities</a>
     <a>Gallery</a>
+    <a class="icon" (click)="openMobileNav()"><i class="fa fa-bars"></i></a>
 </nav>
 
 <div class="banner">

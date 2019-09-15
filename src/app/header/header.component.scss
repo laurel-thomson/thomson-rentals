@@ -1,37 +1,77 @@
 @import "../variables.scss";
 
-.top-nav {
-    background-color: $color-gray;
-    display: flex;
-    justify-content: flex-end;
+@media screen and (max-width: 640px) {
+    .top-nav a {
+        display: none;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .top-nav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .top-nav {
+        position: relative;
+        padding-bottom: 40px;
+    }
+
+    .top-nav a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: white;
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    .top-nav.mobileNavOpen a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }
 
-.top-nav a {
-    color: white;
-    padding: 15px 20px;
-    font-weight: 900;
-}
+@media screen and (min-width: 640px) {
+    .top-nav {
+        background-color: $color-gray;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .top-nav a {
+        color: white;
+        padding: 15px 20px;
+        font-weight: 900;
+    }
+    
+    .top-nav a:hover {
+        background-color: white;
+        color: $color-gray;
+    }
 
-.top-nav a:hover {
-    background-color: white;
-    color: $color-gray;
-}
-
-.thomson {
-    font-size: 8rem;
-    color: $color-green;
-    font-weight: lighter;
-    padding-right: 20px;
-}
-
-.rentals {
-    font-family: "selimaregular", cursive;
-    font-size: 10rem;
-    padding-left: 20px;
-}
-
-.banner {
-    text-align: center;
-    background-color: white;
-    padding-top: 20px;  
+    .top-nav .icon {
+        display: none;
+    }
+    
+    .thomson {
+        font-size: 8rem;
+        color: $color-green;
+        font-weight: lighter;
+        padding-right: 20px;
+    }
+    
+    .rentals {
+        font-family: "selimaregular", cursive;
+        font-size: 10rem;
+        padding-left: 20px;
+    }
+    
+    .banner {
+        text-align: center;
+        background-color: white;
+        padding-top: 20px;  
+    }
 }
