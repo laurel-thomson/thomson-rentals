@@ -1,10 +1,40 @@
 @import "../variables.scss";
 
+.top-nav a:not(.icon):hover {
+    background-color: white;
+    color: $color-gray;
+}
+
+.top-nav a {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 640px) {
+    .top-nav {
+        position: relative;
+        padding-bottom: 40px;
+    }
+
+    .top-nav .items {
+        transition: all 350ms ease-in-out;
+        max-height: 0;
+        overflow-y: hidden;
+    }
+
+    .top-nav.mobileNavOpen .items {
+        max-height: 500px;
+    }
+
     .top-nav a {
-        display: none;
         color: white;
         padding: 10px;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .top-nav a:first-child {
+        margin-top: 50px;
     }
 
     .top-nav a.icon {
@@ -15,7 +45,10 @@
         top: 10px;
         height: 25px;
         width: 35px;
-        cursor: pointer;
+    }
+
+    .top-nav.mobileNavOpen a.icon {
+        top: 10px;
     }
 
     .top-nav a.icon span, .top-nav a.icon span:before, .top-nav a.icon span:after {
@@ -26,7 +59,7 @@
         position: absolute;
         display: block;
         content: '';
-        transition: all 500ms ease-in-out;
+        transition: all 250ms ease-in-out;
     }
 
     .top-nav a.icon span:before {
@@ -35,17 +68,6 @@
 
     .top-nav a.icon span:after {
         bottom: -10px; 
-    }
-
-    .top-nav {
-        position: relative;
-        padding-bottom: 40px;
-    }
-
-    .top-nav.mobileNavOpen a {
-        float: none;
-        display: block;
-        text-align: left;
     }
 
     .top-nav.mobileNavOpen a.icon span {
@@ -76,11 +98,6 @@
         color: white;
         padding: 15px 20px;
         font-weight: 900;
-    }
-    
-    .top-nav a:hover {
-        background-color: white;
-        color: $color-gray;
     }
 
     .top-nav .icon {
