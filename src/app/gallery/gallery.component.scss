@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .gallery .img-cont {
@@ -42,4 +43,27 @@
 
 .gallery .right-arrow {
     margin-left: 60px;
+}
+
+.gallery .intro {
+    position: absolute;
+    bottom: -100px;
+    left: 250px;
+    width: 600px;
+    background-color: white;
+    padding: 15px 35px;
+}
+
+.gallery .intro .welcome {
+    font-family: "selimaregular", cursive;
+    font-size: 3.5rem;
+}
+
+.gallery .intro p {
+    margin-top: -5px;
+}
+
+.gallery .intro .learn-more {
+    font-weight: bold;
+    color: $color-green;
 }
