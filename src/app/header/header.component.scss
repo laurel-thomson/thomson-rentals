@@ -24,6 +24,14 @@
     padding-top: 20px;  
 }
 
+.thomson {
+    font-size: 8vw;
+}
+
+.rentals {
+    font-size: 9.1vw;
+}
+
 @media screen and (max-width: 640px) {
     .top-nav {
         position: relative;
@@ -103,13 +111,13 @@
     }
 
     .thomson {
-        font-size: 3.8rem;
-        padding-right:8px;
+        font-size: 11vw;
+        padding-right: 10px;
     }
 
     .rentals {
-        font-size: 4.75rem;
-        padding-left: 8px;
+        font-size: 14vw;
+        padding-left: 10px;
     }
 }
 
@@ -134,12 +142,10 @@
     }
 
     .thomson {
-        font-size: 8rem;
         padding-right: 20px;
     }
     
     .rentals {
-        font-size: 10rem;
         padding-left: 20px;
     }
 }
