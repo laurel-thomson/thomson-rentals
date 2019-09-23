@@ -7,6 +7,7 @@
 
 .top-nav a {
     cursor: pointer;
+    text-decoration: none;
 }
 
 .thomson {
@@ -135,6 +136,11 @@
         color: white;
         padding: 15px 20px;
         font-weight: 900;
+    }
+
+    .top-nav .items a.active {
+        color: $color-gray;
+        background-color: white;
     }
 
     .top-nav .icon {
