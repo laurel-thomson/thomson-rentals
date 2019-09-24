@@ -1,9 +1,9 @@
 @import "../variables.scss";
 
 footer {
-    background-color: $color-lightgray;
-    padding: 50px 0;
     text-align: center;
     width: 100%;
-    clear: both;
+    background-color: $color-ivory;
+    margin-bottom: -100px;
+    padding: 20px 0;
 }

@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 .top-nav .items a:not(.icon):hover {
-    background-color: white;
+    background-color: $color-ivory;
     color: $color-gray;
 }
 
@@ -21,7 +21,7 @@
 
 .banner {
     text-align: center;
-    background-color: white;
+    background-color: $color-ivory;
     padding-top: 20px;  
 }
 
@@ -50,7 +50,7 @@
     }
 
     .top-nav a {
-        color: white;
+        color: $color-ivory;
         padding: 10px;
         float: none;
         display: block;
@@ -80,7 +80,7 @@
         border-radius: 1px;
         height: 5px;
         width: 35px;
-        background: white;
+        background: $color-ivory;
         position: absolute;
         display: block;
         content: '';
@@ -133,14 +133,14 @@
     }
     
     .top-nav .items a {
-        color: white;
+        color: $color-ivory;
         padding: 15px 20px;
         font-weight: 900;
     }
 
     .top-nav .items a.active {
         color: $color-gray;
-        background-color: white;
+        background-color: $color-ivory;
     }
 
     .top-nav .icon {
