@@ -1,9 +1,63 @@
 @import "../variables.scss";
 
 footer {
-    text-align: center;
     width: 100%;
-    background-color: $color-ivory;
-    margin-bottom: -100px;
-    padding: 20px 0;
+    background-color: $color-green;
+    margin-top: 300px;
+    margin-bottom: -200px;
+    height: 250px;
+    position: relative;
+    text-align: right;
+}
+
+footer .send-message form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .send-message {
+    background: $color-ivory;
+    padding: 20px;
+    position: absolute;
+    bottom: 50px;
+    right: 5%;
+    text-align: left;
+}
+ 
+footer form button {
+    background-color: $color-green;
+    color: $color-ivory;
+    padding: 7px 0;
+    border: 0;
+}
+
+footer form input, footer form textarea {
+    border-radius: 0;
+    border: 1px solid $color-gray;
+    margin-bottom: 10px;
+    padding: 5px;
+    font: 15px 'Gayathri', sans-serif;
+}
+
+footer form textarea {
+    resize: none;
+}
+
+footer .send-message h3 {
+    font-family: 'selimaregular', cursive;
+    font-size: 35px;
+    font-weight: lighter;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+footer .contact-info {
+    padding-top: 45px;
+    margin-right: 40%;
+    padding-right: 30px;
+}
+
+footer .contact-info p {
+    color: $color-ivory;
+    font-size: 20px;
 }
