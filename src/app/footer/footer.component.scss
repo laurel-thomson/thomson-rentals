@@ -20,7 +20,7 @@ footer .send-message {
     padding: 20px;
     position: absolute;
     bottom: 50px;
-    right: 5%;
+    right: 40px;
     text-align: left;
 }
  
@@ -53,11 +53,33 @@ footer .send-message h3 {
 
 footer .contact-info {
     padding-top: 45px;
-    margin-right: 40%;
-    padding-right: 30px;
+    margin-right: 700px;
+    padding-left: 10px;
 }
 
 footer .contact-info p {
     color: $color-ivory;
     font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    footer .send-message {
+        position: relative;
+        margin: 0;
+        bottom: auto;
+        right: auto;
+    }
+
+    footer .contact-info {
+        padding: 10px 10px;
+        margin: 0;
+        text-align: center;
+    }
 }
