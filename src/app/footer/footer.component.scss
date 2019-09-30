@@ -3,58 +3,15 @@
 footer {
     width: 100%;
     background-color: $color-green;
-    margin-top: 300px;
+    margin-top: 100px;
     margin-bottom: -200px;
     height: 250px;
     position: relative;
-    text-align: right;
-}
-
-footer .send-message form {
-    display: flex;
-    flex-direction: column;
-}
-
-footer .send-message {
-    background: $color-ivory;
-    padding: 20px;
-    position: absolute;
-    bottom: 50px;
-    right: 40px;
-    text-align: left;
-}
- 
-footer form button {
-    background-color: $color-green;
-    color: $color-ivory;
-    padding: 7px 0;
-    border: 0;
-}
-
-footer form input, footer form textarea {
-    border-radius: 0;
-    border: 1px solid $color-gray;
-    margin-bottom: 10px;
-    padding: 5px;
-    font: 15px 'Gayathri', sans-serif;
-}
-
-footer form textarea {
-    resize: none;
-}
-
-footer .send-message h3 {
-    font-family: 'selimaregular', cursive;
-    font-size: 35px;
-    font-weight: lighter;
-    margin-top: 0px;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
 footer .contact-info {
     padding-top: 45px;
-    margin-right: 700px;
-    padding-left: 10px;
 }
 
 footer .contact-info p {
@@ -68,13 +25,6 @@ footer .contact-info p {
         flex-direction: column;
         height: auto;
         margin-top: 50px;
-    }
-
-    footer .send-message {
-        position: relative;
-        margin: 0;
-        bottom: auto;
-        right: auto;
     }
 
     footer .contact-info {
