@@ -8,5 +8,8 @@
   },
   "author": "Laurel Thomson",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "nodemailer": "^6.3.0"
+  }
 }
