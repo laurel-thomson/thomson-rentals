@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ApartmentsComponent } from './apartments/apartments.component';
 import { FloorPlansComponent } from './floor-plans/floor-plans.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,14 @@ import { AmenitiesComponent } from './amenities/amenities.component';
     HomeComponent,
     ApartmentsComponent,
     FloorPlansComponent,
-    AmenitiesComponent
+    AmenitiesComponent,
+    HttpClientModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

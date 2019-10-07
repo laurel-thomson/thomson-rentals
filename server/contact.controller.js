@@ -3,8 +3,9 @@ const nodemailer = require('nodemailer');
 exports.email = (req, res) => {
     console.log('SENDING EMAIL....');
     let transport = nodemailer.createTransport({
-        host: 'laurel228@hotmail.com',
-        port: 2525,
+        host: 'smtp-mail.outlook.com',
+        secureConnection: false,
+        port: 587,
         auth: {
             user: 'laurel228@hotmail.com',
             pass: 'Lmlen!_702'
