@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _appService: AppService) { }
 
   ngOnInit() {
+  }
+
+  onSubmit(content) {
+    this._appService.sendEmail(content).subscribe(
+      data => {
+        console.log("email sent");
+        return true;
+      },
+      error => {
+        console.error("Error sending email");
+        return Observable.throw(error);
+      }
+    );
   }
 
 }
