@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { ApartmentsComponent } from './apartments/apartments.component';
 import { AppService } from './app.service';
 import { HttpClient } from 'selenium-webdriver/http';
+import { FormsModule } from '@angular/forms';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { HttpClient } from 'selenium-webdriver/http';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ApartmentsComponent
+    ApartmentsComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

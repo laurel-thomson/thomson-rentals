@@ -1,0 +1,9 @@
+<div class='send-message'>
+    <h3>Send us a message</h3>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <input type='text' name='name' placeholder='Name' ngModel required #name="ngModel">
+        <input type='text' name='email' placeholder='Email' ngModel required #email="ngModel">
+        <textarea name='message' rows='7' cols='40' placeholder='Message' ngModel required #message="ngModel"></textarea>
+        <button>Submit</button>
+    </form>
+</div>

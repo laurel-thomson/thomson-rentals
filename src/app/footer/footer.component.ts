@@ -15,6 +15,7 @@ export class FooterComponent implements OnInit {
   }
 
   onSubmit(content) {
+    console.log('test');
     this._appService.sendEmail(content).subscribe(
       data => {
         console.log("email sent");

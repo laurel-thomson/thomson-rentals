@@ -1,0 +1,51 @@
+@import "../variables.scss";
+
+.send-message form {
+    display: flex;
+    flex-direction: column;
+}
+
+.send-message {
+    background: $color-ivory;
+    padding: 20px;
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+    text-align: left;
+}
+ 
+form button {
+    background-color: $color-green;
+    color: $color-ivory;
+    padding: 7px 0;
+    border: 0;
+}
+
+form input, form textarea {
+    border-radius: 0;
+    border: 1px solid $color-gray;
+    margin-bottom: 10px;
+    padding: 5px;
+    font: 15px 'Gayathri', sans-serif;
+}
+
+form textarea {
+    resize: none;
+}
+
+.send-message h3 {
+    font-family: 'selimaregular', cursive;
+    font-size: 35px;
+    font-weight: lighter;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .send-message {
+        position: relative;
+        margin: 0;
+        bottom: auto;
+        right: auto;
+    }
+}
