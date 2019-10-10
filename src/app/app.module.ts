@@ -8,8 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ApartmentsComponent } from './apartments/apartments.component';
-import { AppService } from './app.service';
-import { HttpClient } from 'selenium-webdriver/http';
+import { ApiService } from '../api.service';
 import { FormsModule } from '@angular/forms';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 
@@ -28,7 +27,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [AppService],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
