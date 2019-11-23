@@ -13,32 +13,14 @@
 }
 
 .gallery .img-cont {
-    overflow: hidden;
-    display: inline-block;    
+    display: inline-block;
     width: 65%;
-}
-
-.gallery img:hover {
-    transform: scale(1.2);
 }
 
 .gallery img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.1);
-    transition: transform 0.4s;
-}
-
-.gallery .left-arrow, .gallery .right-arrow {
-    color: $color-ivory;
-    font-size: 3.5rem;
-    background-color: $color-green;
-}
-
-.gallery .left-arrow .fas, .gallery .right-arrow .fas {
-    margin: 30px -12px 30px -12px;
-    vertical-align: middle;
 }
 
 .home .intro {
@@ -72,25 +54,7 @@
         width: 80%;
     }
 
-    .gallery .left-arrow {
-        margin-right: 20px;
-    }
-
-    .gallery .right-arrow {
-        margin-left: 20px;
-    }
-
     .home .intro {
         width: 80%;
-    }
-}
-
-@media screen and (min-width: 641px) {
-    .gallery .left-arrow {
-        margin-right: 60px;
-    }
-
-    .gallery .right-arrow {
-        margin-left: 60px;
     }
 }

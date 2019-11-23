@@ -11,6 +11,7 @@ import { ApartmentsComponent } from './apartments/apartments.component';
 import { ApiService } from '../api.service';
 import { FormsModule } from '@angular/forms';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    SlickCarouselModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
