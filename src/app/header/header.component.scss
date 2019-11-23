@@ -1,8 +1,12 @@
 @import "../variables.scss";
 
-.top-nav .items a:not(.icon):hover {
-    background-color: $color-ivory;
-    color: $color-gray;
+.top-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 70px;
+  z-index: 1;
 }
 
 .top-nav a {
@@ -22,7 +26,7 @@
 .banner {
     text-align: center;
     background-color: $color-ivory;
-    padding-top: 20px;  
+    padding-top: 20px;
 }
 
 .thomson {
@@ -40,13 +44,14 @@
     }
 
     .top-nav .items {
-        transition: all 350ms ease-in-out;
-        max-height: 0;
+        background-color: $color-gray;
+        transition: height 350ms ease-in-out;
+        height: 0;
         overflow-y: hidden;
     }
 
     .top-nav.mobileNavOpen .items {
-        max-height: 500px;
+        height: 100vh;
     }
 
     .top-nav a {
@@ -59,6 +64,11 @@
 
     .top-nav a:first-child {
         margin-top: 50px;
+    }
+
+    .top-nav .items a:not(.icon):hover {
+        background-color: $color-ivory;
+        color: $color-gray;
     }
 
     .top-nav a.icon {
@@ -76,7 +86,9 @@
         top: 10px;
     }
 
-    .top-nav a.icon span, .top-nav a.icon span:before, .top-nav a.icon span:after {
+    .top-nav a.icon span,
+    .top-nav a.icon span:before,
+    .top-nav a.icon span:after {
         border-radius: 1px;
         height: 5px;
         width: 35px;
@@ -92,14 +104,15 @@
     }
 
     .top-nav a.icon span:after {
-        bottom: -10px; 
+        bottom: -10px;
     }
 
     .top-nav.mobileNavOpen a.icon span {
         background-color: transparent;
     }
 
-    .top-nav.mobileNavOpen a.icon span:before, .top-nav.mobileNavOpen a.icon span:after {
+    .top-nav.mobileNavOpen a.icon span:before,
+    .top-nav.mobileNavOpen a.icon span:after {
         top: 0;
     }
 
@@ -130,17 +143,32 @@
     .top-nav .items {
         display: flex;
         justify-content: flex-end;
-    }
-    
-    .top-nav .items a {
-        color: $color-ivory;
-        padding: 15px 20px;
-        font-weight: 900;
+        align-items: center;
+        height: 100%;
     }
 
-    .top-nav .items a.active {
-        color: $color-gray;
-        background-color: $color-ivory;
+    .top-nav .items a {
+        color: $color-ivory;
+        padding: 10px 0;
+        margin: 0 20px;
+        font-weight: 900;
+        position: relative;
+    }
+
+    .top-nav .items a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $color-ivory;
+      transition: width 200ms ease;
+    }
+
+    .top-nav .items a.active::after,
+    .top-nav .items a:hover::after {
+      width: 100%;
     }
 
     .top-nav .icon {
@@ -150,7 +178,7 @@
     .thomson {
         padding-right: 20px;
     }
-    
+
     .rentals {
         padding-left: 20px;
     }
