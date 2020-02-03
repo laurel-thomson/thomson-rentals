@@ -1,4 +1,6 @@
-# ThomsonRentals
+# Thomson Rentals
+
+This is a website for Thomson Rentals in Maryville, MO.  This site is currently in development, with a basic shell hosted here: http://thomsonrentals.com
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
