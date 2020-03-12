@@ -4,7 +4,10 @@
             #slickModal="slick-carousel"
             [config]="slideConfig">
             <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-                <img src="{{ slide.img }}" alt="" width="100%">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="{{ slide.desktop_img }}">
+                    <img src="{{ slide.mobile_img }}" alt="" width="100%">
+                </picture>
             </div>
         </ngx-slick-carousel>
     </div>

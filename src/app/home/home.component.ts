@@ -9,9 +9,18 @@ export class HomeComponent implements OnInit {
   title = 'ngSlick';
 
   slides = [
-    {img: "../assets/images/first_image.jpg"},
-    {img: "../assets/images/second_image.jpg"},
-    {img: "../assets/images/third_image.jpg"}
+    {
+      desktop_img: "https://ik.imagekit.io/thomsonrentals/third_image_3drkkZKEj3.jpg?tr=w-800,h-400",
+      mobile_img: "https://ik.imagekit.io/thomsonrentals/third_image_3drkkZKEj3.jpg?tr=w-500,h-300"
+    },
+    {
+      desktop_img: "https://ik.imagekit.io/thomsonrentals/first_image_3PxbtWMvq.jpg?tr=w-800,h-400",
+      mobile_img: "https://ik.imagekit.io/thomsonrentals/first_image_3PxbtWMvq.jpg?tr=w-500,h-300"
+    },
+    {
+      desktop_img: "https://ik.imagekit.io/thomsonrentals/second_image_D1lVmrzo_.jpg?tr=w-800,h-400",
+      mobile_img: "https://ik.imagekit.io/thomsonrentals/second_image_D1lVmrzo_.jpg?tr=w-500,h-300"
+    }
   ];
 
   slideConfig = {
