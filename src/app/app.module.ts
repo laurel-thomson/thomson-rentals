@@ -12,6 +12,9 @@ import { ApiService } from '../api.service';
 import { FormsModule } from '@angular/forms';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { FloorPlansComponent } from './floor-plans/floor-plans.component';
+import { AmenitiesComponent } from './amenities/amenities.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     FooterComponent,
     HomeComponent,
     ApartmentsComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    FloorPlansComponent,
+    AmenitiesComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
