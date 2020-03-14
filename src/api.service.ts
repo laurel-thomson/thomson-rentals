@@ -15,7 +15,6 @@ export class ApiService {
   sendEmail(content) {
     console.log('in send email');
     let body = JSON.stringify(content);
-    console.log(httpOptions);
     return this.http.post('http://localhost:3000/contact/', "{}", httpOptions);
   }
 }

@@ -25,7 +25,7 @@ app.post('/contact', function (req, res) {
         port: 587,
         auth: {
             user: 'laurel228@hotmail.com',
-            pass: 'Lmlen!_702'
+            pass: 'Lmlen!_7024'
         }
     });
     const message = {
