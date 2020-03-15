@@ -6,4 +6,5 @@
         <textarea name='message' rows='7' cols='40' placeholder='Message' ngModel required #message="ngModel"></textarea>
         <button>Submit</button>
     </form>
+    <i *ngIf="sendingEmail" class="fas fa-spin fa-spinner" area-label="Sending Email"></i>
 </div>

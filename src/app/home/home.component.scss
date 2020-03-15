@@ -1,11 +1,11 @@
 @import "../variables.scss";
 
 .home {
-    margin-bottom: 130px;
+    margin-bottom: 5px;
 }
 
 .gallery {
-    margin: 30px auto;
+    margin: 5px auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,7 @@
 
 .gallery .img-cont {
     display: inline-block;
-    width: 65%;
+    width: 100%;
 }
 
 .gallery img {
@@ -24,10 +24,9 @@
 }
 
 .home .intro {
-    width: 65%;
     margin: 0 auto;
     background-color: $color-ivory;
-    padding-bottom: 20px;
+    padding: 0 10px 20px;
 }
 
 .home .welcome, .home p, .home .learn-more {
@@ -41,20 +40,10 @@
 
 .home .intro p {
     margin-top: -5px;
+    letter-spacing: 0.02em;
 }
 
 .home .intro .learn-more {
     font-weight: bold;
     color: $color-green;
-}
-
-@media screen and (max-width: 640px) {
-    .gallery .img-cont {
-        height: 300px;
-        width: 80%;
-    }
-
-    .home .intro {
-        width: 80%;
-    }
 }

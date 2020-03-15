@@ -56,7 +56,6 @@
     .top-nav a {
         color: $color-ivory;
         padding: 10px;
-        float: none;
         display: block;
         text-align: center;
     }
@@ -71,14 +70,13 @@
     }
 
     .top-nav a.icon {
-        display: block;
-        float: right;
+        display: flex;
+        align-items: center;
         position: absolute;
         right: 0;
         top: 0;
         bottom: 0;
         margin: auto 0;
-        height: 25px;
         width: 35px;
     }
 

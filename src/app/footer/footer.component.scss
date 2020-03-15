@@ -3,8 +3,6 @@
 footer {
     width: 100%;
     background-color: $color-green;
-    margin-top: 300px;
-    margin-bottom: -200px;
     height: 250px;
     position: relative;
     text-align: right;
@@ -19,6 +17,11 @@ footer .contact-info {
 footer .contact-info p {
     color: $color-ivory;
     font-size: 20px;
+    letter-spacing: 0.02em;
+}
+
+.footer .contact-info p strong {
+    letter-spacing: 0.04em;
 }
 
 @media screen and (max-width: 1000px) {
@@ -26,7 +29,6 @@ footer .contact-info p {
         display: flex;
         flex-direction: column;
         height: auto;
-        margin-top: 50px;
     }
 
     footer .contact-info {

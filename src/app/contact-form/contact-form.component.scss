@@ -15,10 +15,16 @@
 }
  
 form button {
-    background-color: $color-green;
-    color: $color-ivory;
-    padding: 7px 0;
+    background-color: #006747;
+    color: #FBFBF1;
+    padding: 9px 0 4px;
     border: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Gayathri', sans-serif;
+    letter-spacing: 0.06em;
+    font-size: 15px;
 }
 
 form input, form textarea {
@@ -39,6 +45,14 @@ form textarea {
     font-weight: lighter;
     margin-top: 0px;
     margin-bottom: 20px;
+}
+
+.send-message .fa-spinner {
+    position: absolute;
+    top: calc(50% - 22px);
+    left: calc(50% - 22px);
+    font-size: 44px;
+    color: $color-green;
 }
 
 @media screen and (max-width: 1000px) {
