@@ -27,6 +27,10 @@ form button {
     font-size: 15px;
 }
 
+form button:disabled {
+    background-color: #ccc;
+}
+
 form input, form textarea {
     border-radius: 0;
     border: 1px solid $color-gray;
@@ -53,6 +57,20 @@ form textarea {
     left: calc(50% - 22px);
     font-size: 44px;
     color: $color-green;
+}
+
+.send-message .status-message {
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-top: 20px;
+}
+
+.send-message .status-message.success i {
+    color: $color-green;
+}
+
+.send-message .status-message.failure i {
+    color: $color-red;
 }
 
 @media screen and (max-width: 1000px) {

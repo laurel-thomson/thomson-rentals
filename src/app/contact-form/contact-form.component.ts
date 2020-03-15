@@ -9,27 +9,33 @@ import { ApiService } from '../../api.service';
 })
 export class ContactFormComponent implements OnInit {
   constructor(private apiService : ApiService) { }
-  sendingEmail: boolean;
+  sentState: String = 'waiting';
 
   ngOnInit() {
   }
 
   onSubmit(f: NgForm) {
-    this.sendingEmail = true;
+    this.sentState = 'sending';
     this.apiService.sendEmail(f.form.value).subscribe(
-      (res) => this.onSuccess(res),
-      (err) => this.onError(err)
+      (res) => this.onSuccess(res, f),
+      (err) => this.onError(err, f)
     );
   }
 
-  onSuccess = (res) => {
-    this.sendingEmail = false;
+  onSuccess = (res: Object, form: NgForm) => {
+    this.sentState = 'success';
     console.log(JSON.stringify(res));
+    this.clearForm(form);
   }
 
-  onError = (err) => {
-    this.sendingEmail = false;
+  onError = (err: Object, form: NgForm) => {
+    this.sentState = 'failure';
     console.log(JSON.stringify(err));
+    this.clearForm(form);
+  }
+
+  clearForm = (form: NgForm) => {
+    form.reset();
   }
 
 }

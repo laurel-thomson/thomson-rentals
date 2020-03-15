@@ -14,13 +14,14 @@ footer .contact-info {
     padding-left: 10px;
 }
 
-footer .contact-info p {
+footer .contact-info p,
+footer .contact-info p a {
     color: $color-ivory;
     font-size: 20px;
     letter-spacing: 0.02em;
 }
 
-.footer .contact-info p strong {
+footer .contact-info p strong {
     letter-spacing: 0.04em;
 }
 

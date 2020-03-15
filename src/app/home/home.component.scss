@@ -2,6 +2,9 @@
 
 .home {
     margin-bottom: 5px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gallery {
@@ -46,4 +49,10 @@
 .home .intro .learn-more {
     font-weight: bold;
     color: $color-green;
+}
+
+@media screen and (min-width: 1024px) {
+    .home {
+        margin-bottom: 250px;
+    }
 }
