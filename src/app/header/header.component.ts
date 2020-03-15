@@ -11,7 +11,15 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  public openMobileNav() {
+  navItems = [
+    { name : 'Home', link : '/home' },
+    { name : 'Apartments', link : '/apartments' },
+    { name : 'Floor Plans', link : '/floorplans' },
+    { name : 'Amenities', link : '/amenities' },
+    { name : 'Gallery', link : '/gallery' },
+  ];
+
+  public toggleMobileNav() {
     this.mobileNavOpen = !this.mobileNavOpen;
   }
 

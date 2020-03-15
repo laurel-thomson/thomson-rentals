@@ -1,12 +1,10 @@
 <nav class="top-nav" [ngClass]="{'mobileNavOpen' : mobileNavOpen}">
     <div class="items">
-        <a routerLink="/home" routerLinkActive="active">Home</a>
-        <a routerLink="/apartments" routerLinkActive="active">Apartments</a>
-        <a routerLink="/floorplans" routerLinkActive="active">Floor Plans</a>
-        <a routerLink="/amenities" routerLinkActive="active">Amenities</a>
-        <a routerLink="/gallery" routerLinkActive="active">Gallery</a>
+        <a *ngFor="let navItem of navItems" routerLink={{navItem.link}} (click)="toggleMobileNav()" routerLinkActive="active">
+            {{navItem.name}}
+        </a>
     </div>
-    <a class="icon" (click)="openMobileNav()"><span></span></a>
+<a class="icon" (click)="toggleMobileNav()"><span></span></a>
 </nav>
 
 <div class="banner">
