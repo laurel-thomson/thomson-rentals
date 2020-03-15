@@ -15,9 +15,18 @@ export class ContactFormComponent implements OnInit {
   }
 
   onSubmit(f: NgForm) {
-    this.apiService.sendEmail('test_data').subscribe((res) => {
-      console.log("response" + res);
-    });
+    this.apiService.sendEmail(f.form.value).subscribe(
+      (res) => this.onSuccess(res),
+      (err) => this.onError(err)
+    );
+  }
+
+  onSuccess = (res) => {
+    console.log(JSON.stringify(res));
+  }
+
+  onError = (err) => {
+    console.log(JSON.stringify(err));
   }
 
 }

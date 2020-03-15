@@ -13,8 +13,7 @@ export class ApiService {
   constructor(private http:HttpClient) { }
 
   sendEmail(content) {
-    console.log('in send email');
     let body = JSON.stringify(content);
-    return this.http.post('http://localhost:3000/contact/', "{}", httpOptions);
+    return this.http.post('http://localhost:3000/contact/', body, httpOptions);
   }
 }
