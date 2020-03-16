@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { IgxCarouselModule } from 'igniteui-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,10 +12,10 @@ import { ApartmentsComponent } from './apartments/apartments.component';
 import { ApiService } from '../api.service';
 import { FormsModule } from '@angular/forms';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { FloorPlansComponent } from './floor-plans/floor-plans.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,9 +34,11 @@ import { GalleryComponent } from './gallery/gallery.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    SlickCarouselModule
+    BrowserAnimationsModule,
+    IgxCarouselModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

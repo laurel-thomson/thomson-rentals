@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  title = 'ngSlick';
 
   slides = [
     {
@@ -22,15 +21,6 @@ export class HomeComponent implements OnInit {
       mobile_img: "https://ik.imagekit.io/thomsonrentals/second_image_D1lVmrzo_.jpg?tr=w-500,h-300"
     }
   ];
-
-  slideConfig = {
-    "slidesToShow": 1,
-    "slidesToScroll": 1,
-    "arrows" : false,
-    "dots": true,
-    "infinite": true,
-    "fade": true
-  };
 
   constructor() { }
 
