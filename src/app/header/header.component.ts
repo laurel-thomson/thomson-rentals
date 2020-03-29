@@ -12,9 +12,9 @@ export class HeaderComponent implements OnInit {
   }
 
   navItems = [
-    { name : 'Home', link : '/home' },
     { name : 'Apartments', link : '/apartments' },
     { name : 'Floor Plans', link : '/floorplans' },
+    { name : 'Thomson Rentals', link : '/home' },
     { name : 'Amenities', link : '/amenities' },
     { name : 'Gallery', link : '/gallery' },
   ];

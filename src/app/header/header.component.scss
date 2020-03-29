@@ -5,36 +5,20 @@
   top: 0;
   right: 0;
   left: 0;
-  height: 70px;
+  height: 40px;
   z-index: 1;
 }
 
 .top-nav a {
     cursor: pointer;
     text-decoration: none;
-}
-
-.thomson {
     color: $color-green;
-    font-weight: lighter;
-}
-
-.rentals {
-    font-family: "selimaregular", cursive;
-}
-
-.banner {
-    text-align: center;
-    background-color: $color-ivory;
-    padding-top: 20px;
-}
-
-.thomson {
-    font-size: 8vw;
-}
-
-.rentals {
-    font-size: 9.1vw;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 10px 0;
+    margin: 0 20px;
+    font-weight: 700;
+    font-size: 15px;
 }
 
 @media screen and (max-width: 640px) {
@@ -43,10 +27,10 @@
     }
 
     .top-nav .items {
-        background-color: $color-gray;
         transition: height 350ms ease-in-out;
         height: 0;
         overflow-y: hidden;
+        background-color: rgba(255,255,255,0.7);
     }
 
     .top-nav.mobileNavOpen .items {
@@ -54,19 +38,15 @@
     }
 
     .top-nav a {
-        color: $color-ivory;
         padding: 10px;
         display: block;
         text-align: center;
+        margin-bottom: 20px;
+        font-size: 16px;
     }
 
     .top-nav a:first-child {
-        margin-top: 50px;
-    }
-
-    .top-nav .items a:not(.icon):hover {
-        background-color: $color-ivory;
-        color: $color-gray;
+        margin-top: 80px;
     }
 
     .top-nav a.icon {
@@ -88,13 +68,13 @@
     .top-nav a.icon span:before,
     .top-nav a.icon span:after {
         border-radius: 1px;
-        height: 5px;
+        height: 4px;
         width: 35px;
-        background: $color-ivory;
+        background: $color-green;
         position: absolute;
         display: block;
         content: '';
-        transition: all 250ms ease-in-out;
+        transition: transform 250ms ease-in-out;
     }
 
     .top-nav a.icon span:before {
@@ -121,36 +101,44 @@
     .top-nav.mobileNavOpen span:after {
         transform: rotate(-45deg);
     }
-
-    .thomson {
-        font-size: 11vw;
-        padding-right: 10px;
-    }
-
-    .rentals {
-        font-size: 14vw;
-        padding-left: 10px;
-    }
 }
 
 @media screen and (min-width: 640px) {
     .top-nav {
-        background-color: $color-gray;
+        height: 70px;
     }
-
+    
     .top-nav .items {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-around;
         align-items: center;
         height: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
     }
 
     .top-nav .items a {
-        color: $color-ivory;
         padding: 10px 0;
         margin: 0 20px;
-        font-weight: 900;
         position: relative;
+    }
+
+    .top-nav .items a.home {
+        font-size: 18px;
+        border: 2px solid $color-green;
+        padding: 15px 25px;
+        transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+    }
+
+    .top-nav .items a.home:hover {
+        background-color: $color-green;
+        color: white;
+    }
+
+    .top-nav .items a.home::after {
+        content: none;
     }
 
     .top-nav .items a::after {
@@ -160,7 +148,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background-color: $color-ivory;
+      background-color: $color-green;
       transition: width 200ms ease;
     }
 
@@ -175,13 +163,5 @@
 
     .banner {
       padding-top: 90px;
-    }
-
-    .thomson {
-        padding-right: 20px;
-    }
-
-    .rentals {
-        padding-left: 20px;
     }
 }

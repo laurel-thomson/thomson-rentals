@@ -6,11 +6,8 @@
 }
 
 .send-message {
-    background: $color-ivory;
+    background: white;
     padding: 20px;
-    position: absolute;
-    bottom: 50px;
-    right: 40px;
     text-align: left;
 }
  
@@ -22,7 +19,6 @@ form button {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 900;
-    font-family: 'Gayathri', sans-serif;
     letter-spacing: 0.06em;
     font-size: 15px;
 }
@@ -33,10 +29,11 @@ form button:disabled {
 
 form input, form textarea {
     border-radius: 0;
-    border: 1px solid $color-gray;
+    border: 1px solid gray;
     margin-bottom: 10px;
     padding: 5px;
-    font: 15px 'Gayathri', sans-serif;
+    font-size: 15px;
+    font-family: 'Glacial Indifference', sans-serif;
 }
 
 form textarea {
@@ -44,8 +41,7 @@ form textarea {
 }
 
 .send-message h3 {
-    font-family: 'selimaregular', cursive;
-    font-size: 35px;
+    text-transform: uppercase;
     font-weight: lighter;
     margin-top: 0px;
     margin-bottom: 20px;
@@ -70,14 +66,5 @@ form textarea {
 }
 
 .send-message .status-message.failure i {
-    color: $color-red;
-}
-
-@media screen and (max-width: 1000px) {
-    .send-message {
-        position: relative;
-        margin: 0;
-        bottom: auto;
-        right: auto;
-    }
+    color: $color-orange;
 }

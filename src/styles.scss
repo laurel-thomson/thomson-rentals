@@ -1,22 +1,19 @@
 // CSS Reset, comment out if not required or using a different module
 @import '~minireset.css/minireset';
 /* You can add global styles to this file, and also import other style files */
-@import url(https://fonts.googleapis.com/css?family=Gayathri:100,400,900&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Overpass:400,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap);
 @import 'app/variables.scss';
 
 @font-face {
-    font-family: 'selimaregular';
-    src: url('assets/fonts/selima_-webfont.woff2') format('woff2'),
-         url('assets/fonts/selima_-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'Glacial Indifference';
+  src: url(assets/fonts/GlacialIndifference-Regular.otf) format("opentype");
 }
 
 :root {
-    font-family: 'Gayathri', sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
     font-size: 1.1rem;
-    background-color: $color-gray;
+    letter-spacing: 0.08em;
 }
 
 .igx-carousel__indicators li {
@@ -42,6 +39,11 @@
 body {
   margin: 0;
 }
+
+body a {
+  text-decoration: none;
+}
+
 @import "~igniteui-angular/lib/core/styles/themes/index";
 // Uncomment the following lines if you want to add a custom palette:
 // $primary: #731963 !default;
