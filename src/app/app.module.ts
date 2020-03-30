@@ -16,6 +16,7 @@ import { FloorPlansComponent } from './floor-plans/floor-plans.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MapBoxComponent } from './map-box/map-box.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactFormComponent,
     FloorPlansComponent,
     AmenitiesComponent,
-    GalleryComponent
+    GalleryComponent,
+    MapBoxComponent
   ],
   imports: [
     BrowserModule,
