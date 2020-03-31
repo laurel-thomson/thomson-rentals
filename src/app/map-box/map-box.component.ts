@@ -20,38 +20,50 @@ export class MapBoxComponent implements OnInit {
       zoom: 13 // starting zoom
     });
 
-    map.on('load', function() {
-      map.loadImage(
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/400px-Cat_silhouette.svg.png',
-        function(error, image) {
-          if (error) throw error;
-          map.addImage('cat', image);
-          map.addSource('point', {
-            'type': 'geojson',
-            'data': {
-              'type': 'FeatureCollection',
-              'features': [
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-94.8725, 40.3461]
-                  }
-                }
-              ]
-            }
-          });
-          map.addLayer({
-            'id': 'points',
-            'type': 'symbol',
-            'source': 'point',
-            'layout': {
-              'icon-image': 'cat',
-              'icon-size': 0.25
-            }
-          });
-        }
-      );
+    const geoJson = [
+      {
+        'type': 'Feature',
+        'geometry': {
+          'type': 'Point',
+          'coordinates': ['-94.8725', '40.3461']
+        },
+        'properties': {
+          'message': 'helloworld'
+        }
+      }
+    ];
+
+    const data = {
+          type: 'FeatureCollection',
+          features: geoJson
+    };
+    
+    map.on('load', (event) => {
+      map.addSource('customMarker', {
+              type: 'geojson',
+              data: {
+                type: 'FeatureCollection',
+                features: []
+              }
+        });
+        map.getSource('customMarker').setData(data);
+        map.addLayer({
+                id: 'customMarketid',
+                source: 'customMarker',
+                type: 'symbol',
+                layout: {
+                  'text-field': 'hello',
+                  'text-size': 24,
+                  'text-transform': 'uppercase',
+                  'icon-image': 'marker-15',
+                  'text-offset': [0, 1.5]
+                },
+                paint: {
+                  'text-color': '#f16624',
+                  'text-halo-color': '#fff',
+                  'text-halo-width': 2
+                }
+              });
     });
   }
 
