@@ -3,13 +3,13 @@ var initializeMapbox = function() {
     var map = new mapboxgl.Map({
         container: 'mapbox',
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [-94.8803936, 40.3554965], // starting position [lng, lat]
-        zoom: 14 // starting zoom
+        center: [-94.8801098,40.3520000], // starting position [lng, lat]
+        zoom: 15 // starting zoom
     });
     
     map.on('load', function() {
         map.loadImage(
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/400px-Cat_silhouette.svg.png',
+            'assets/images/marker.png',
             function(error, image) {
                 if (error) throw error;
                 map.addImage('cat', image);
@@ -55,7 +55,7 @@ var initializeMapbox = function() {
                     'source': 'point',
                     'layout': {
                         'icon-image': 'cat',
-                        'icon-size': 0.05
+                        'icon-size': 0.6
                     }
                 });
             }
