@@ -2,7 +2,9 @@ var initializeMapbox = function() {
     mapboxgl.accessToken = 'pk.eyJ1IjoibGF1cmVsLXRob21zb24iLCJhIjoiY2s4ZHJlOGF6MHhiZjNqbzV4YXk1eGZ1eCJ9.6cHeuIroLCKeqvNYOZIrJw';
     var map = new mapboxgl.Map({
         container: 'mapbox',
-        style: 'mapbox://styles/mapbox/streets-v11'
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-94.8803936, 40.3554965], // starting position [lng, lat]
+        zoom: 14 // starting zoom
     });
     
     map.on('load', function() {
@@ -20,7 +22,28 @@ var initializeMapbox = function() {
                                 'type': 'Feature',
                                 'geometry': {
                                     'type': 'Point',
-                                    'coordinates': [0, 0]
+                                    'coordinates': [-94.8803936, 40.3554965]
+                                }
+                            },
+                            {
+                                'type' : 'Feature',
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-94.8800693,40.3546354]
+                                }
+                            },
+                            {
+                                'type' : 'Feature',
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-94.8801098,40.3538782]
+                                }
+                            },
+                            {
+                                'type' : 'Feature',
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-94.8765567,40.3489813]
                                 }
                             }
                         ]
@@ -32,7 +55,7 @@ var initializeMapbox = function() {
                     'source': 'point',
                     'layout': {
                         'icon-image': 'cat',
-                        'icon-size': 0.25
+                        'icon-size': 0.05
                     }
                 });
             }
