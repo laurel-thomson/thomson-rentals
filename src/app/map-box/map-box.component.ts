@@ -10,8 +10,12 @@ export class MapBoxComponent implements OnInit {
 
   constructor() { }
 
+  onPointClicked = function(apartment) {
+    console.log(apartment);
+  }
+
   ngOnInit() {
-    initializeMapbox();
+    initializeMapbox(this.onPointClicked);
   }
 
 }
