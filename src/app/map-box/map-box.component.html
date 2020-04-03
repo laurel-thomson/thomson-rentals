@@ -1,1 +1,5 @@
-<div id="mapbox"></div>
+<div class="map-box-cont">
+    <div id="mapbox"></div>
+    <app-map-box-card *ngFor="let apartment of apartments" [apartment]="apartment.name" [address]="apartment.address" [active]="apartment.active">
+    </app-map-box-card>
+</div>

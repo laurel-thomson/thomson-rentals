@@ -17,6 +17,7 @@ import { AmenitiesComponent } from './amenities/amenities.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapBoxComponent } from './map-box/map-box.component';
+import { MapBoxCardComponent } from './map-box-card/map-box-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MapBoxComponent } from './map-box/map-box.component';
     FloorPlansComponent,
     AmenitiesComponent,
     GalleryComponent,
-    MapBoxComponent
+    MapBoxComponent,
+    MapBoxCardComponent
   ],
   imports: [
     BrowserModule,
