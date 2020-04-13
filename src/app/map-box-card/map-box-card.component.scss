@@ -1,3 +1,14 @@
-.map-box-card:not(.active) {
-    display: none;
+@import "../variables.scss";
+
+.map-box-card {
+    padding: 20px;
+}
+
+.map-box-card.active {
+    background-color: $color-green;
+    color: white;
+}
+
+.map-box-card h4 {
+    font-weight: bold;
 }

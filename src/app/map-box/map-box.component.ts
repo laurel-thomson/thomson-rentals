@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 declare const initializeMapbox: any;
 
 @Component({
   selector: 'app-map-box',
   templateUrl: './map-box.component.html',
-  styleUrls: ['./map-box.component.scss']
+  styleUrls: ['./map-box.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class MapBoxComponent implements OnInit {
   apartments = [

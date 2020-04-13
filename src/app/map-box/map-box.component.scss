@@ -2,3 +2,11 @@
     height: 500px;
     width: 100%;
 }
+
+#mapbox .marker {
+    height: 40px;
+    width: 25px;
+    background-image: url('../../assets/images/marker.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}

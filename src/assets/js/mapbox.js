@@ -8,91 +8,63 @@ var initializeMapbox = function(clickHandler
         zoom: 15, // starting zoom
         dragPan: window.innerWidth >= 1024
     });
-    
-    map.on('load', function() {
-        map.loadImage(
-            'assets/images/marker.png',
-            function(error, image) {
-                if (error) throw error;
-                map.addImage('cat', image);
-                map.addSource('point', {
-                    'type': 'geojson',
-                    'data': {
-                        'type': 'FeatureCollection',
-                        'features': [
-                            {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [-94.8803936, 40.3554965]
-                                },
-                                'properties': {
-                                    'description': 'Rosewood Apartments'
-                                }
-                            },
-                            {
-                                'type' : 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [-94.8800693,40.3546354]
-                                },
-                                'properties': {
-                                    'description': 'Towerview Apartments'
-                                }
-                            },
-                            {
-                                'type' : 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [-94.8801098,40.3538782]
-                                },
-                                'properties': {
-                                    'description': 'Wabash Corners Apartments'
-                                }
-                            },
-                            {
-                                'type' : 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [-94.8765567,40.3489813]
-                                },
-                                'properties': {
-                                    'description': 'Buchanan Place Townhouses'
-                                }
-                            }
-                        ]
-                    }
-                });
-                map.addLayer({
-                    'id': 'points',
-                    'type': 'symbol',
-                    'source': 'point',
-                    'layout': {
-                        'icon-image': 'cat',
-                        'icon-size': 0.6
-                    }
-                });
-                map.addControl(new mapboxgl.FullscreenControl());
 
-                map.on('click', 'points', function(e) {
-                    var coordinates = e.features[0].geometry.coordinates.slice();
-                    var description = e.features[0].properties.description;
-                     
-                    // Ensure that if the map is zoomed out such that multiple
-                    // copies of the feature are visible, the popup appears
-                    // over the copy being pointed to.
-                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-                    }
-                     
-                    new mapboxgl.Popup()
-                    .setLngLat(coordinates)
-                    .setHTML(description)
-                    .addTo(map);
-
-                    clickHandler(description);
-                });
+    var geojson = {
+        'type': 'FeatureCollection',
+        'features': [
+            {
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-94.8803936, 40.3554965]
+                },
+                'properties': {
+                    'description': 'Rosewood Apartments'
+                }
+            },
+            {
+                'type' : 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-94.8800693,40.3546354]
+                },
+                'properties': {
+                    'description': 'Towerview Apartments'
+                }
+            },
+            {
+                'type' : 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-94.8801098,40.3538782]
+                },
+                'properties': {
+                    'description': 'Wabash Corners Apartments'
+                }
+            },
+            {
+                'type' : 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-94.8765567,40.3489813]
+                },
+                'properties': {
+                    'description': 'Buchanan Place Townhouses'
+                }
             }
-        );
+        ]
+    };
+
+    // add markers to map
+    geojson.features.forEach(function(marker) {
+
+        // create a HTML element for each feature
+        var el = document.createElement('div');
+        el.className = 'marker';
+    
+        // make a marker for each feature and add to the map
+        new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
     });
 }
