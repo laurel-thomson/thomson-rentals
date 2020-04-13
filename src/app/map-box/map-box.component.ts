@@ -39,6 +39,20 @@ export class MapBoxComponent implements OnInit {
     });
   }
 
+  onCardClicked = (index) => {
+    var markers = document.getElementsByClassName('marker');
+    for (var i = 0; i < 4; i++) {
+      if (i === index) {
+        markers[i].classList.add('active');
+      } else {
+        markers[i].classList.remove('active');
+      }
+    }
+    this.apartments.forEach((apt, i) => {
+      apt.active = i === index;
+    });
+  }
+
   ngOnInit() {
     initializeMapbox(this.onPointClicked);
   }

@@ -57,7 +57,6 @@ var initializeMapbox = function(clickHandler
 
     // add markers to map
     geojson.features.forEach(function(marker) {
-
         // create a HTML element for each feature
         var el = document.createElement('div');
         el.className = 'marker';
