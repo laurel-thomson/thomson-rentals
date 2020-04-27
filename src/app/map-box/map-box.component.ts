@@ -34,6 +34,7 @@ export class MapBoxComponent implements OnInit {
   constructor() { }
 
   onPointClicked = (apartment) => {
+    console.log(apartment);
     this.apartments.forEach(apt => {
       apt.active = apt.name === apartment;
     });
