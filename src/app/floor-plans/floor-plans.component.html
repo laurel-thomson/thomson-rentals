@@ -1,1 +1,9 @@
-<p>floor-plans works!</p>
+<div class="floor-plans">
+    <div class="gallery">
+        <igx-carousel #carousel [loop]="true" animationType="fade" class="carousel-fade">
+            <igx-slide  *ngFor="let slide of slides;" class="slide">
+                <img src="{{ slide.img }}" alt="" width="100%">
+            </igx-slide>
+        </igx-carousel>
+    </div>
+</div>

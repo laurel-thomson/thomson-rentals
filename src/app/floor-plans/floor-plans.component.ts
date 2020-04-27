@@ -7,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FloorPlansComponent implements OnInit {
 
+  slides = [
+    {
+      img : '../../assets/images/floor_plans/one_bedroom.png' 
+    },
+    {
+      img : '../../assets/images/floor_plans/two_bedroom.png' 
+    },
+    {
+      img : '../../assets/images/floor_plans/three_bedroom_1.png' 
+    },
+    {
+      img : '../../assets/images/floor_plans/three_bedroom_2.png' 
+    },
+  ];
+
   constructor() { }
 
   ngOnInit() {
