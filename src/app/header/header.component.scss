@@ -21,7 +21,7 @@
     font-size: 15px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
     .top-nav {
         position: relative;
     }
@@ -45,7 +45,11 @@
         font-size: 16px;
     }
 
-    .top-nav a:first-child {
+    .top-nav a:nth-of-type(4) {
+        display: none;
+    }
+
+    .top-nav a:first-of-type {
         margin-top: 80px;
     }
 
@@ -53,8 +57,8 @@
         display: flex;
         align-items: center;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 7px;
+        top: 15px;
         bottom: 0;
         margin: auto 0;
         width: 55px;
@@ -103,7 +107,7 @@
     }
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1024px) {
     .top-nav {
         height: 70px;
     }
@@ -123,6 +127,10 @@
         padding: 10px 0;
         margin: 0 20px;
         position: relative;
+    }
+
+    .top-nav a:nth-of-type(1) {
+        display: none;
     }
 
     .top-nav .items a.home {
