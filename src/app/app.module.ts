@@ -11,7 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { ApartmentsComponent } from './apartments/apartments.component';
 import { ApiService } from '../api.service';
 import { FormsModule } from '@angular/forms';
-import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FloorPlansComponent } from './floor-plans/floor-plans.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -26,7 +25,6 @@ import { MapBoxCardComponent } from './map-box-card/map-box-card.component';
     FooterComponent,
     HomeComponent,
     ApartmentsComponent,
-    ContactFormComponent,
     FloorPlansComponent,
     AmenitiesComponent,
     GalleryComponent,
