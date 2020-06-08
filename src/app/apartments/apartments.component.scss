@@ -1,4 +1,4 @@
-.apartments {
+.content-wrapper {
     max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
@@ -7,25 +7,24 @@
     margin-bottom: 100px;
 }
 
-.apartments h2 {
-    font-weight: bold;
-    color: var(--green);
+.content-wrapper h2 {
+    text-transform: uppercase;
     margin-bottom: 15px;
     font-size: 22px;
 }
 
-.apartments h3 {
+.content-wrapper h3 {
     font-weight: bold;
     color: var(--green);
     margin-bottom: 10px;
 }
 
-.apartments p {
+.content-wrapper p {
     margin-bottom: 20px;
 }
 
 @media screen and (min-width: 640px) {
-    .apartments {
+    .content-wrapper {
         margin-bottom: 300px;
     }
 }

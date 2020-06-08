@@ -1,1 +1,12 @@
-<p>gallery works!</p>
+<div class="content-wrapper">
+    <div class="gallery">
+        <igx-carousel #carousel [loop]="true" animationType="fade" class="carousel-fade">
+            <igx-slide  *ngFor="let slide of slides;" class="slide">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="{{ slide.desktop_img }}">
+                    <img src="{{ slide.mobile_img }}" alt="" width="100%">
+                </picture>
+            </igx-slide>
+        </igx-carousel>
+    </div>
+</div>

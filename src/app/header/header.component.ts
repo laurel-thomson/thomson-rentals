@@ -16,8 +16,8 @@ export class HeaderComponent implements OnInit {
     { name : 'Apartments', link : '/apartments' },
     { name : 'Floor Plans', link : '/floorplans' },
     { name : 'Thomson Rentals', link : '/home' },
-    { name : 'Amenities', link : '/amenities' },
     { name : 'Gallery', link : '/gallery' },
+    { name : 'Contact', link : '/contact' },
   ];
 
   public toggleMobileNav() {

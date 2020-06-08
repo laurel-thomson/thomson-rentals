@@ -12,11 +12,11 @@ import { ApartmentsComponent } from './apartments/apartments.component';
 import { ApiService } from '../api.service';
 import { FormsModule } from '@angular/forms';
 import { FloorPlansComponent } from './floor-plans/floor-plans.component';
-import { AmenitiesComponent } from './amenities/amenities.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapBoxComponent } from './map-box/map-box.component';
 import { MapBoxCardComponent } from './map-box-card/map-box-card.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +26,10 @@ import { MapBoxCardComponent } from './map-box-card/map-box-card.component';
     HomeComponent,
     ApartmentsComponent,
     FloorPlansComponent,
-    AmenitiesComponent,
     GalleryComponent,
     MapBoxComponent,
-    MapBoxCardComponent
+    MapBoxCardComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
